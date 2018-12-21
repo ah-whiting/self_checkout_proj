@@ -10,6 +10,10 @@
     let vcapture = null;
     console.log('scanner.js is loaded')
 
+    let constraints = {}
+
+    navigator.mediaDevices.getUserMedia  = navigator.mediaDevices.getUserMedia || navigator.getUserMedia
+
     function startCamera(){
         console.log('camera is started')
         let video = document.getElementById('video');
